@@ -1,0 +1,50 @@
+solve_math_and_statistics:
+  description: >
+    Note: 
+      - [placeholder] is represent for answer of the math problem or statistics problem.
+      - The answer must be in Japanese.
+      - Question and Instruction may contain math image presented by SVG format.
+      - Question and Instruction may contain table statistics
+      - The question may contain Mathjax and Latex.
+    Steps:
+      1. Read the instruction: {instruction} and question: {question}.
+      2. If the question is a math problem, solve the math problem.
+      3. If the question is a statistics problem, solve the statistics problem.
+      4. Write the answer and explanation step-by-step in Japanese.
+  expected_output: >
+    Correct answer of the math problem or statistics problem.
+    Detailed explanation of the solution in Japanese.
+    The question must be easy to understand for a 7th grade student.
+  agent: solver_agent
+
+# search_explanation:
+#   description: >
+#     1. Based on the question: {question}, the instruction: {instruction}.
+#     2. Look up find the similar question and instruction from a training set.
+#     2.1. The question in the training set can be located at question_content.
+#     2.2. The instruction in the training set can be located at item_description.
+#     3. Get the explanation of the most similar question from a training set.
+#   expected_output: >
+#     The explanation of the most similar question from a training set.
+#   agent: search_agent
+
+# explan_solution:
+#   description: >
+#     Based on the solution and the similar explanation,
+#     Provide a detailed explanation of the solution in Japanese for 7th grade math.
+#     The explanation must be clear, concise, and easy to understand.
+#   expected_output: >
+#     Provide a detailed, step-by-step solution with formulas and calculations in Japanese.
+#     Explain why each step is necessary and how it contributes to the solution in Japanese.
+#     The explanation must follow to the similar explanation.
+#   agent: solver_agent
+
+# evaluate_math_explanation:
+#   description: >
+#     Use the solution from solver_agent
+#     Evaluate if the solution right or not
+#     Edit and provide feedback on the solution in Japanese for 7th grade math.
+#   expected_output: >
+#     Detailed evaluation of the solution, including feedback on correctness, clarity, and completeness on Japanese.
+#     Formatted as markdown without '```'
+#   agent: evaluator_agent
