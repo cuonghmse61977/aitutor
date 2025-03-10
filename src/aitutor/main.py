@@ -90,7 +90,8 @@ def run_and_save_to_csv(training_file_path, output_csv_path):
 
     print(f"Results saved to {output_csv_path}")
 
-# run_and_save_to_csv("src/aitutor/training_set.json", "math_problem_results.csv")
+#Edit file here to run
+run_and_save_to_csv("src/aitutor/training_set.json", "math_problem_results.csv")
 
 def train():
     """

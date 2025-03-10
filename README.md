@@ -32,7 +32,7 @@ This project uses CrewAI, Jupyter, and Ollama deepseekv2:1.6b to solve math prob
 
 2. **Run `data_processing.ipynb`**: Open the Jupyter notebook `data_processing.ipynb` and run all cells to generate the `output.json` file.
 
-3. **Edit `main.py`**: Update the path of `training_set.json` to `output.json` in `main.py`.
+3. **Edit `main.py`**: Update the path of method run `run_and_save_to_csv` `training_set.json` to `output.json` in `main.py`.
 
 4. **Run `main.py`**: Execute the `main.py` script to get the math problem results.
 
@@ -46,7 +46,7 @@ Here is an example of how to run the project:
 
 1. Add or edit `file.csv` with the correct format.
 2. Open Jupyter and run `data_processing.ipynb` to generate `output.json`.
-3. Edit `main.py` to set the path of `training_set.json` to `output.json`.
+3. Edit `main.py` to set the path of method run `run_and_save_to_csv` `training_set.json` to `output.json`.
 4. Run `main.py` to get the results.
 
 ```sh
