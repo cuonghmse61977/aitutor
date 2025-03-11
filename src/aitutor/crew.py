@@ -66,6 +66,15 @@ class Aitutor():
 			memory=True,
 		)
 	
+	@agent
+	def explanation_agent(self) -> Agent:
+		return Agent(
+			config=self.agents_config['explanation_agent'],
+			llm=self.llm,
+			max_iter=40,
+			memory=True,
+		)
+	
 	# @agent
 	# def search_agent(self) -> Agent:
 	# 	return Agent(
@@ -78,11 +87,17 @@ class Aitutor():
 	# task dependencies, and task callbacks, check out the documentation:
 	# https://docs.crewai.com/concepts/tasks#overview-of-a-task
 	@task
-	def solve_math(self) -> Task:
+	def solve_math_and_statistics(self) -> Task:
 		return Task(
-			config=self.tasks_config['solve_math'],
+			config=self.tasks_config['solve_math_and_statistics'],
 		)
 
+	@task
+	def explan_solution(self) -> Task:
+		return Task(
+			config=self.tasks_config['explan_solution'],
+		)
+	
 	# @task
 	# def search_explanation(self) -> Task:
 	# 	return Task(

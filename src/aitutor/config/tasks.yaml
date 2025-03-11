@@ -10,11 +10,8 @@ solve_math_and_statistics:
       1. Read the instruction: {instruction} and question: {question}.
       2. If the question is a math problem, solve the math problem.
       3. If the question is a statistics problem, solve the statistics problem.
-      4. Write the answer and explanation step-by-step in Japanese.
   expected_output: >
     Correct answer of the math problem or statistics problem.
-    Detailed explanation of the solution in Japanese.
-    The question must be easy to understand for a 7th grade student.
   agent: solver_agent
 
 # search_explanation:
@@ -28,16 +25,16 @@ solve_math_and_statistics:
 #     The explanation of the most similar question from a training set.
 #   agent: search_agent
 
-# explan_solution:
-#   description: >
-#     Based on the solution and the similar explanation,
-#     Provide a detailed explanation of the solution in Japanese for 7th grade math.
-#     The explanation must be clear, concise, and easy to understand.
-#   expected_output: >
-#     Provide a detailed, step-by-step solution with formulas and calculations in Japanese.
-#     Explain why each step is necessary and how it contributes to the solution in Japanese.
-#     The explanation must follow to the similar explanation.
-#   agent: solver_agent
+explan_solution:
+  description: >
+    Based on the solution and the similar explanation,
+    Provide a detailed explanation of the solution in Japanese for 7th grade math.
+    The explanation must be clear, concise, and easy to understand.
+  expected_output: >
+    Provide a detailed, step-by-step solution with formulas and calculations in Japanese.
+    Explain why each step is necessary and how it contributes to the solution in Japanese.
+    The solution must be easy to understand for a 7th grade student.
+  agent: explanation_agent
 
 # evaluate_math_explanation:
 #   description: >

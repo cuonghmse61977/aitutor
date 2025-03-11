@@ -37,6 +37,8 @@ def run():
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
+run()
+
 def load_data(file_path):
     """Loads JSON data from a file."""
     try:
@@ -90,8 +92,7 @@ def run_and_save_to_csv(training_file_path, output_csv_path):
 
     print(f"Results saved to {output_csv_path}")
 
-#Edit file here to run
-run_and_save_to_csv("src/aitutor/training_set.json", "math_problem_results.csv")
+# run_and_save_to_csv("src/aitutor/training_set.json", "math_problem_results.csv")
 
 def train():
     """
